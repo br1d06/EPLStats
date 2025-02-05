@@ -1,0 +1,44 @@
+﻿@using WOD.Domain.Models;
+@using HelloMvcApp.Controllers;
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+	ViewData["Title"] = "Home Page";
+}
+@model WOD.WebUI.ViewModels.HomeViewModel;
+
+<div class="wrapper">
+	<table class="EPLTable">
+		<thead>
+			<tr>
+				<th scope="col">Position</th>
+				<th scope="col">Club</th>
+				<th scope="col">Games</th>
+				<th scope="col">Wins</th>
+				<th scope="col">Losses</th>
+				<th scope="col">Ties</th>
+				<th scope="col">GF</th>
+				<th scope="col">GA</th>
+				<th scope="col">GD</th>
+				<th scope="col">Points</th>
+			</tr>
+		</thead>
+		<tbody>
+			@for (int i = 0; i < Model.FootballClubs.Count; i++)
+			{
+				<tr>
+					<th scope="row">@(i + 1)</th>
+					<td><img src="@Model.FootballClubs[i].Logo" /> @Model.FootballClubs[i].Name</td>					
+					<td>@Model.FootballClubs[i].Games</td>
+					<td>@Model.FootballClubs[i].Wins</td>
+					<td>@Model.FootballClubs[i].Losses</td>
+					<td>@Model.FootballClubs[i].Ties</td>
+					<td>@Model.FootballClubs[i].GoalsFor</td>
+					<td>@Model.FootballClubs[i].GoalsAgainst</td>
+					<td>@Model.FootballClubs[i].GoalsDifference</td>					
+					<td>@Model.FootballClubs[i].Points</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

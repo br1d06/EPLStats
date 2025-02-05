@@ -1,0 +1,32 @@
+﻿@using WOD.Domain.Models;
+@using HelloMvcApp.Controllers;
+@{
+    ViewData["Title"] = "All News";
+}
+@model WOD.WebUI.ViewModels.NewsViewModel;
+
+<div class="wrapper">
+    <div class="news-widgets-container">
+        
+
+            @if (Model.AllNews == null || Model.AllNews.Count == 0)
+            {
+                <div class="news-widgets">
+                    <a news="blah" href="#"><img src="@Model.DefaultNews.Image" /></a>
+				    <span>@Model.DefaultNews.Title</span>
+			    </div>
+            }
+            else
+            {
+                @foreach (var news in Model.AllNews)
+                {
+                    <div class="news-widgets">
+                    <a news="blah" href="/News/Details?id=@(news.Id)"><img src="~/Content/NewsImages/@news.Image" /></a>
+                        <span>@news.Title</span>
+                    </div>
+                }
+            }
+    </div>
+	
+</div>
+

@@ -1,0 +1,31 @@
+﻿@model WOD.WebUI.ViewModels.NewsViewModel
+
+@{
+    ViewData["Title"] = "Index Admin";
+}
+
+<div class="wrapper">
+	<h1>Index Admin page</h1>
+
+    <h3>News List Editorial</h3>
+    <h4>News</h4>
+    <hr />
+    <div class="news-editorial-box">
+        <form asp-asp-controller="News">
+            @for (int index = 0; index < Model.AllNews.Count; index++)
+            {
+                <div class="news-widgets">
+                        <a news="blah" href="#"><img src="~/Content/NewsImages/@Model.AllNews[index].Image" /></a>
+				    <span>@Model.AllNews[index].Title</span>
+                    <br>
+                    <button type="submit" asp-action="Delete" asp-route-id="@Model.AllNews[index].Id">Delete</button>
+                    <button type="submit" asp-action="Edit" asp-route-id="@Model.AllNews[index].Id">Edit</button>
+                </div>         
+		    }
+        </form>
+	</div>
+
+    <a asp-action="Index" style="padding-top: 10px">Back to List</a>
+    <a asp-action="Create" style="padding-top: 10px">Create new News</a>
+
+</div>

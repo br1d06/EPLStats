@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>337dc833-fc03-4330-add2-d13b076ebe02</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngleSharp" Version="1.1.2" />
+    <PackageReference Include="EFCore.NamingConventions" Version="7.0.2" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.20">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageReference Include="Npgsql" Version="7.0.8" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.18" />
+    <PackageReference Include="Swagger-Net" Version="8.5.12.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="wwwroot\Content\FootballClubsLogos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Content\NewsImages\CR7InJuventus.png" />
+    <None Include="wwwroot\Content\NewsImages\CR7InMU.png" />
+    <None Include="wwwroot\Content\NewsImages\MURubenAmori.png" />
+    <None Include="wwwroot\Content\NewsImages\photomode_30122023_192732.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WOD.DAL\WOD.DAL.csproj" />
+    <ProjectReference Include="..\WOD.Domain\WOD.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

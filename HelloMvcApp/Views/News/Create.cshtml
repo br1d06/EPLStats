@@ -1,0 +1,52 @@
+﻿@using WOD.Domain.Models;
+@using HelloMvcApp.Controllers;
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model WOD.Domain.Models.News;
+
+
+<div class="wrapper">
+	<h1>Create</h1>
+
+	<h4>News</h4>
+	<hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" asp-controller="News" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Text" class="control-label"></label>
+                    <textarea asp-for="Text" class="form-control" style="height: 200px;"></textarea>
+                    <span asp-validation-for="Text" class="text-danger"></span>
+                </div> 
+                
+                <div class="form-group">
+                    <label asp-for="Image" class="control-label"></label>
+                    <input type="file" name="image" class="form-control">
+                    <span asp-validation-for="Image" class="text-danger"></span>
+				</div> 
+				<div class="form-group" style="padding-top:10px" >
+                    <button type="submit">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

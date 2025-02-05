@@ -1,0 +1,24 @@
+﻿@model WOD.Domain.Models.News
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="wrapper">
+	<hr />
+	<div class="news-details">
+		<h1>@Html.DisplayFor(model => model.Title)</h1>
+		
+		<img src="~/Content/NewsImages/@Html.DisplayFor(model => model.Image)" />
+
+		@Html.DisplayFor(model => model.DateAdded) 
+
+		<p><font size="4">@Html.DisplayFor(model => model.Text)</font></p>
+
+		<div>
+		<a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+		<a asp-action="Index">Back to List</a>
+		</div>
+	</div>
+</div>
+
+

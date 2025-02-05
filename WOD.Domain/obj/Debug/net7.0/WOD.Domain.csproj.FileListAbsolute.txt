@@ -1,0 +1,14 @@
+D:\HelloMvcApp\WOD.Domain\bin\Debug\net7.0\WOD.Domain.deps.json
+D:\HelloMvcApp\WOD.Domain\bin\Debug\net7.0\WOD.Domain.dll
+D:\HelloMvcApp\WOD.Domain\bin\Debug\net7.0\WOD.Domain.pdb
+D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\WOD.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\WOD.Domain.AssemblyInfoInputs.cache
+D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\WOD.Domain.AssemblyInfo.cs
+D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\WOD.Domain.csproj.CoreCompileInputs.cache
+D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\WOD.Domain.dll
+D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\refint\WOD.Domain.dll
+D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\WOD.Domain.pdb
+D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\ref\WOD.Domain.dll
+D:\HelloMvcApp\WOD.Domain\bin\Debug\net7.0\WOD.Domain.runtimeconfig.json
+D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\WOD.Domain.csproj.AssemblyReference.cache
+D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\WOD.Domain.genruntimeconfig.cache

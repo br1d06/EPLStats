@@ -1,0 +1,351 @@
+html {
+  font-size: 14px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+html,
+body {
+    height: 100%;
+}
+.wrapper {
+    margin-left: 15%;
+    width: 70%;
+    min-height: 100%;
+}
+
+.pb-3{
+    height: 100%;
+}
+
+.team-name {
+    color: black;    
+}
+
+.team-logo{
+    height: 500px;
+    width: 500px;
+}
+
+.nav-bar {
+    margin:auto;
+    width:70%; 
+}
+
+.nav-bar img{
+    width:25%;
+}
+
+.team-container {
+    white-space: nowrap;
+    overflow-x: scroll;
+    gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 150px;
+    display: inline-block;
+}
+
+.team-container button{
+    position: absolute;
+}
+
+.news-container {
+    width: 50%;
+    justify-content: space-between;
+    margin: auto;
+    height: 651px;
+    background: image();
+    margin-top: 30px;
+    float: left; 
+}
+
+.news-container .btn {
+    background: #00bfff;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border:0;
+    transition: all 500ms ease;
+    width: 9.457%;
+}
+
+.news-container .btn a:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.news-info{
+    height: 90%;
+    width: 100%;
+    
+}
+
+.news-info a img {
+    height:90%;
+    width: 100%;
+}
+
+.news-info a h2 {
+    position: relative;
+    top: 450px;
+    left: 0;
+    width: 100%;
+}
+
+.news-info a h2 span {
+    color: white;
+    font: bold 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+.news-info a h2 span.spacer {
+    padding: 0 5px;
+}
+
+news-widgets-container{
+    height: auto;
+    width: 100%;  
+}
+
+.news-widgets {
+    height: 150px;
+    width: 20%;
+    display: inline-block;
+}
+
+.news-widgets a {
+    
+    display: inline-block;
+}
+
+.news-widgets span {
+    font-size: 15px;
+    
+}
+
+.news-widgets a img{
+    object-fit: cover;
+    height: 135px;
+    width: 240px;
+}
+
+.news-widgets a h4 {
+    position: relative;
+    top: 100px;
+    left: 0;
+    width: 100%;
+}
+
+.news-widgets a h4 span {
+    color: white;
+    font: bold 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+.news-widgets a h4 span.spacer {
+    padding: 0 5px;
+}
+
+.news-details {
+    padding-left: 15%;
+    display: grid;
+    width: 65%;
+}
+
+.news-details img{
+    width:100%;
+    height: 350px;
+}
+
+.news-editorial-box {
+
+}
+
+.news-editorial-box button {
+
+}
+
+.EPLTable {
+    width: 100%;
+    height: 800px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.EPLTable img{
+    height: 33px;
+    width:33px;
+    margin-top: 10px;
+}
+
+.EPLTable table th{
+margin-right: 5px;
+}
+
+.EPLTable table td{
+    margin-top: 10px;
+}
+
+.EPLTable-mini {
+    width: 35%;
+    height: 651px;
+    margin-right: auto;
+    margin-top: 30px;
+    float:right;
+}
+
+.EPLTable-mini img{
+    height: 15px;
+    width: 15px;
+}
+
+#ul_top_hypers li {
+    list-style: none;
+    display: flex;
+    float: right;
+    margin: 0 15px 0 15px;
+}
+
+.logo{
+    text-transform:uppercase;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+header{
+    padding: 50px 0;
+}
+
+header nav ul li{
+    display: inline-block;
+}
+header nav ul li a {
+    color: black;
+}
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #00bfff;
+    border-radius: 10px;
+    position:relative;
+    top:20px;
+    left:-38px;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover{
+    border-bottom: 5px solid #00bfff;
+}
+
+.widget-box {
+    
+    width: 33%;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.footer {
+    height: auto;
+    width: 100%;
+    background-color: gray;
+    margin-top: 100px;
+}
+.footer-widgets {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer hr {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer a{
+    margin-right: 30px;
+}
+
+.footer img{
+    background-color: gray;
+    height:15px;
+}
+.privacy-policy {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-sw-left{
+    position:absolute;
+    float:left;
+    height:10%;
+    margin-top: 45%;
+}
+
+.button-sw-right {
+    position: absolute;
+    float: right;
+    height: 10%;
+    margin-top: 45%;
+}
+
+.football-clubs-list{
+    width: 100%;
+    height: auto;
+}
+
+.football-clubs-list content {
+    display: inline-block;
+}
+
+.football-clubs-list a img{
+    height: 75px;
+    width: 75px;
+    vertical-align: middle;
+}
+
+.football-clubs-list p{
+
+}
+
+.team-widget {
+    height: auto;
+    width: 24%;
+    display: inline-block;
+    align-items: center;
+}
+
+.team-widget{
+    vertical-align:middle;
+}
+
+.team-widget img {
+  
+}
+
+.team-widget span {
+    width: 75px;
+}
+
+.fc-card {
+
+}

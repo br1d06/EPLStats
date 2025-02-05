@@ -1,0 +1,38 @@
+﻿@using System.ComponentModel.DataAnnotations;
+@using WOD.Domain.Models;
+
+@model WOD.Domain.Models.FootballClub
+
+@{
+    ViewData["Title"] = "Details";
+
+}
+
+
+
+<div class="wrapper">
+    <img src="@Html.DisplayFor(model=> model.Logo)" /> <h1>@Html.DisplayFor(model=> model.Name)</h1>
+    
+    <div class="fc-card">
+            <dl>
+                <dt>Position in EPL Table</dt>
+                <dd>@Html.DisplayFor(model=> model.Rank)</dd>
+			    <dt>Points</dt>
+                <dd>@Model.Points</dd>
+			    <dt>Games</dt>
+			    <dd>@Html.DisplayFor(model=> model.Games)</dd>			    			              
+                <dt>Wins</dt>
+                <dd>@Html.DisplayFor(model=> model.Wins)</dd>
+                <dt>Loses</dt>
+                <dd>@Html.DisplayFor(model=> model.Losses)</dd>
+                <dt>Ties</dt>
+                <dd>@Html.DisplayFor(model=> model.Ties)</dd>
+                <dt>Goals For</dt>
+                <dd>@Html.DisplayFor(model=> model.GoalsFor)</dd>
+                <dt>Goals Against</dt>
+                <dd>@Html.DisplayFor(model=> model.GoalsAgainst)</dd>
+                <dt>Goals difference</dt>
+                <dd>@Model.GoalsDifference</dd>
+            </dl>
+    </div>
+</div> 

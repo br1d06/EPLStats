@@ -1,0 +1,17 @@
+D:\HelloMvcApp\WOD.DAL\bin\Debug\net7.0\WOD.DAL.deps.json
+D:\HelloMvcApp\WOD.DAL\bin\Debug\net7.0\WOD.DAL.dll
+D:\HelloMvcApp\WOD.DAL\bin\Debug\net7.0\WOD.DAL.pdb
+D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\WOD.DAL.csproj.AssemblyReference.cache
+D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\WOD.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\WOD.DAL.AssemblyInfoInputs.cache
+D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\WOD.DAL.AssemblyInfo.cs
+D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\WOD.DAL.csproj.CoreCompileInputs.cache
+D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\WOD.DAL.dll
+D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\refint\WOD.DAL.dll
+D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\WOD.DAL.pdb
+D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\ref\WOD.DAL.dll
+D:\HelloMvcApp\WOD.DAL\bin\Debug\net7.0\WOD.DAL.runtimeconfig.json
+D:\HelloMvcApp\WOD.DAL\bin\Debug\net7.0\WOD.Domain.dll
+D:\HelloMvcApp\WOD.DAL\bin\Debug\net7.0\WOD.Domain.pdb
+D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\WOD.DAL.csproj.CopyComplete
+D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\WOD.DAL.genruntimeconfig.cache

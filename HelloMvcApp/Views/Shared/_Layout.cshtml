@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	@RenderSection("scripts", required: false)
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HelloMvcApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/HelloMvcApp.styles.css" asp-append-version="true" />
+</head>
+<body>   
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<header class="nav-bar">
+
+		<img src="https://metaratings.ru/upload/iblock/d48/d48ebab60551ce791853567fb1018b3c.png" /> 
+
+		<nav>
+			<ul id="ul_top_hypers">
+				<li><a href="/FootballClubs/Index">Next Round</a></li>
+				<li><a href="#">Last Results</a></li>
+				<li><a href="/Home/EPLTable">Tables</a></li>
+				<li><a href="/News">News</a></li>
+				<li class="active"><a href="/Home">Home</a></li>
+
+			</ul>
+		</nav>
+
+	</header>
+	
+	<main role="main" class="pb-3">
+		@RenderBody()
+	</main>
+	<div class="footer">
+		<div class="footer-widgets">
+			<div class="widget-box">
+				<div class="widget-heading">
+					<h4>Premier League ( EPL )</h4>
+				</div>
+
+				<div class="widget-container">
+					<ul id="menu-footer-1" class="menu">
+						<li class="menu-item">
+							<a href="#">
+								<span>Epl Fixtures</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">
+								<span>EPL Results</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">
+								<span>EPL Table</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="widget-box">
+				<div class="widget-heading">
+					<h4>Premier League 2024</h4>
+				</div>
+				<div class="widget-container">
+					<ul id="menu-footer-1" class="menu">
+						<li class="menu-item">
+							<a href="#">
+								<span>Fixtures</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">
+								<span>Results</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">
+								<span>Tables</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="widget-box">
+				<div class="widget-heading">
+					<h4>About EPL</h4>
+				</div>
+				<div class="widget-container">
+					<ul id="menu-footer-1" class="menu">
+						<li class="menu-item">
+							<a href="#">
+								<span>Privacy Policy</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">
+								<span>Video</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">
+								<span>Contact</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr width="50%" />
+		<div class="footer-container">
+			<font size="3">© Copyright EPL 2024, All Rights Reserved</font>
+			<br />
+			<font size="3">Arsenal, Aston Villa, Bournemouth, Brentford, Brighton, Burnley,Chelsea, Crystal Palace, Everton, Fulham, Leeds United, Leicester City, Liverpool, Manchester City, Manchester United, Newcastle United, Nottingham Forest, Southampton, Tottenham Hotspur, West Ham United, Wolverhampton Wanderers, Lutton Town, Sheffield United</font>
+			<br />
+			<a href="#">
+				<span>Premier League Standings 2024-2025</span>
+			</a>
+			<br />
+			<a href="/Home">
+				<span>Home</span>
+			</a>
+			<a href="#">
+				<span>Contact</span>
+			</a>
+			<a href="/Home/Privacy">
+				<span>Privacy Policy</span>
+			</a>
+			<a href="#"><img src="https://w7.pngwing.com/pngs/434/247/png-transparent-fb-social-icons-circular-black-icon.png" /></a>
+			<a href="#"><img src="https://w7.pngwing.com/pngs/748/680/png-transparent-twitter-x-logo-thumbnail.png" /></a>
+			<a href="#"><img src="https://w7.pngwing.com/pngs/1003/904/png-transparent-computer-icons-logo-instagram-logo-instagram-logo-miscellaneous-text-symbol-thumbnail.png" /></a>
+		</div>
+	</div>
+</body>
+</html>

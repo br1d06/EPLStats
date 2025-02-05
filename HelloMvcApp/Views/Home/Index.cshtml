@@ -1,0 +1,61 @@
+﻿@using WOD.Domain.Models;
+@using HelloMvcApp.Controllers;
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+	ViewData["Title"] = "Home Page";
+}
+@model WOD.WebUI.ViewModels.HomeViewModel;
+
+
+<div class="wrapper">
+
+	<div class="team-container">
+
+		@foreach (var footballClub in Model.FootballClubs)
+		{
+			<a target="_blank" href="/FootballClubs/Details?id=@footballClub.Id"> <img src="@footballClub.Logo" alt="@footballClub.Name" height="75" width="75"> </a>
+		}
+
+	</div>
+
+	<div class="news-container">	
+		<div class="news-info">			
+			@if (Model.ContainerNews.Count == 0)
+			{
+				<a news="blah" href="#"><h2><span>@Model.DefaultNews.Title</span></h2><img src="~/Content/NewsImages/@Model.DefaultNews.Image" /></a>
+			}
+			else
+			{
+				<a news="blah" href="/News/Details?id=@Model.TranslayedNews.Id"><h2><span>@Model.TranslayedNews.Title</span></h2><img src="~/Content/NewsImages/@Model.TranslayedNews.Image" /></a>
+			}
+		</div>			
+		@for (int i = 0; i < Model.ContainerNews.Count; i++)
+		{
+			<a type="button" href="/News/GetTranslayedNews?index=@(i)" class="btn">@(i+1)</a>
+		}
+	</div>
+	
+	<table class="EPLTable-mini">
+		<thead>
+			<tr>
+				<th scope="col">Position</th>
+				<th scope="col">Club</th>
+				<th scope="col">Points</th>
+				<th scope="col">GD</th>
+			</tr>
+		</thead>
+		<tbody>
+			@for(int i=0; i<Model.FootballClubs.Count; i++)
+			{				
+			<tr>
+				<th scope="row">@(i+1)</th>
+				<td><img src="@Model.FootballClubs[i].Logo"/> @Model.FootballClubs[i].Name</td>
+				<td>@Model.FootballClubs[i].Points</td>
+				<td>@Model.FootballClubs[i].GoalsDifference</td>
+			</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
