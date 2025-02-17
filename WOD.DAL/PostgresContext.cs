@@ -7,11 +7,13 @@ public partial class PostgresContext : DbContext
 {
 	public PostgresContext()
 	{
+		Database.Migrate();
 	}
 
 	public PostgresContext(DbContextOptions<PostgresContext> options)
 		: base(options)
 	{
+		Database.Migrate();
 	}
 
 	public DbSet<Match> Matches { get; set; }

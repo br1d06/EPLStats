@@ -13,5 +13,6 @@ D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\ref\WOD.DAL.dll
 D:\HelloMvcApp\WOD.DAL\bin\Debug\net7.0\WOD.DAL.runtimeconfig.json
 D:\HelloMvcApp\WOD.DAL\bin\Debug\net7.0\WOD.Domain.dll
 D:\HelloMvcApp\WOD.DAL\bin\Debug\net7.0\WOD.Domain.pdb
-D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\WOD.DAL.csproj.CopyComplete
 D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\WOD.DAL.genruntimeconfig.cache
+D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\WOD.DAL.sourcelink.json
+D:\HelloMvcApp\WOD.DAL\obj\Debug\net7.0\WOD.DAL.csproj.Up2Date

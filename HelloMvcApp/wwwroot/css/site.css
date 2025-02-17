@@ -1,67 +1,254 @@
-html {
-  font-size: 14px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.button-sw-left {
+    position: absolute;
+    float: left;
+    height: 10%;
+    margin-top: 45%;
+}
+
+.button-sw-right {
+    position: absolute;
+    float: right;
+    height: 10%;
+    margin-top: 45%;
+}
+
+.btn-back {
+    background-color: #f0ad4e;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-create {
+    background-color: #008CBA;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.EPLTable {
+    width: 100%;
+    height: 800px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.EPLTable img {
+    height: 33px;
+    width: 33px;
+    margin-top: 10px;
+}
+
+.EPLTable table td {
+    margin-top: 10px;
+}
+
+.EPLTable table th {
+    margin-right: 5px;
+}
+
+.EPLTable-mini {
+    width: 35%;
+    margin-top: 30px;
+    float: right;
+}
+
+.EPLTable-mini-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.EPLTable-mini table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.EPLTable-mini th,
+.EPLTable-mini td {
+    padding: 10px;
+    text-align: left;
+}
+
+.EPLTable-mini th {
+    background-color: #f4f4f4;
+}
+
+.EPLTable-mini img {
+    height: 15px;
+    width: 15px;
+}
+
+.footer {
+    height: auto;
+    width: 100%;
+    background-color: gray;
+    margin-top: 100px;
+}
+
+.footer a {
+    margin-right: 30px;
+}
+
+.footer-container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer hr {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer img {
+    background-color: gray;
+    height: 15px;
+}
+
+.footer-widgets {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.football-clubs-list {
+    width: 100%;
+    height: auto;
+}
+
+.football-clubs-list a img {
+    height: 75px;
+    width: 75px;
+    vertical-align: middle;
+}
+
+.football-clubs-list content {
+    display: inline-block;
+}
+
+header {
+    padding: 50px 0;
+}
+
+header img {
+    height: 180px;
+    width: 200px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: black;
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #00bfff;
+    border-radius: 10px;
+    position: relative;
+    top: 20px;
+    left: -38px;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 5px solid #00bfff;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 html,
 body {
     height: 100%;
 }
-.wrapper {
-    margin-left: 15%;
-    width: 70%;
-    min-height: 100%;
-}
 
-.pb-3{
-    height: 100%;
-}
-
-.team-name {
-    color: black;    
-}
-
-.team-logo{
-    height: 500px;
-    width: 500px;
+.logo {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
 }
 
 .nav-bar {
-    margin:auto;
-    width:70%; 
+    margin: auto;
+    width: 70%;
 }
 
-.nav-bar img{
-    width:25%;
+.nav-bar img {
+    width: 25%;
 }
 
-.team-container {
-    white-space: nowrap;
-    overflow-x: scroll;
-    gap: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 150px;
-    display: inline-block;
+.news-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-.team-container button{
-    position: absolute;
+.news-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.news-card:hover {
+    transform: translateY(-5px);
 }
 
 .news-container {
     width: 50%;
-    justify-content: space-between;
-    margin: auto;
-    height: 651px;
-    background: image();
     margin-top: 30px;
-    float: left; 
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .news-container .btn {
@@ -69,7 +256,7 @@ body {
     color: black;
     border-radius: 5px;
     padding: 10px 15px;
-    border:0;
+    border: 0;
     transition: all 500ms ease;
     width: 9.457%;
 }
@@ -78,14 +265,50 @@ body {
     cursor: pointer;
     transform: scale(1.1);
 }
-.news-info{
-    height: 90%;
-    width: 100%;
-    
+
+.news-content {
+    padding: 20px;
+    flex-grow: 1;
 }
 
-.news-info a img {
-    height:90%;
+
+.news-date {
+    margin: 0;
+}
+
+.news-dates {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #999;
+}
+
+.news-details {
+    padding-left: 15%;
+    display: grid;
+    width: 65%;
+}
+
+.news-details img {
+    width: 100%;
+    height: 494.9px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    height: 100%;
+}
+
+.news-image {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.news-info {
+    height: 90%;
     width: 100%;
 }
 
@@ -100,7 +323,6 @@ body {
     color: white;
     font: bold 24px/45px Helvetica, Sans-Serif;
     letter-spacing: -1px;
-    background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.7);
     padding: 10px;
 }
@@ -109,9 +331,34 @@ body {
     padding: 0 5px;
 }
 
-news-widgets-container{
-    height: auto;
-    width: 100%;  
+.news-info a img {
+    height: 90%;
+    width: 100%;
+}
+
+.news-pagination {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.news-pagination .btn {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.news-pagination .btn:hover {
+    background-color: #ddd;
+}
+
+.news-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .news-widgets {
@@ -121,19 +368,7 @@ news-widgets-container{
 }
 
 .news-widgets a {
-    
     display: inline-block;
-}
-
-.news-widgets span {
-    font-size: 15px;
-    
-}
-
-.news-widgets a img{
-    object-fit: cover;
-    height: 135px;
-    width: 240px;
 }
 
 .news-widgets a h4 {
@@ -147,7 +382,6 @@ news-widgets-container{
     color: white;
     font: bold 24px/45px Helvetica, Sans-Serif;
     letter-spacing: -1px;
-    background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.7);
     padding: 10px;
 }
@@ -156,175 +390,113 @@ news-widgets-container{
     padding: 0 5px;
 }
 
-.news-details {
-    padding-left: 15%;
-    display: grid;
-    width: 65%;
+.news-widgets a img {
+    object-fit: cover;
+    height: 135px;
+    width: 240px;
 }
 
-.news-details img{
-    width:100%;
-    height: 350px;
+.news-widgets span {
+    font-size: 15px;
 }
 
-.news-editorial-box {
-
-}
-
-.news-editorial-box button {
-
-}
-
-.EPLTable {
-    width: 100%;
-    height: 800px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.EPLTable img{
-    height: 33px;
-    width:33px;
-    margin-top: 10px;
-}
-
-.EPLTable table th{
-margin-right: 5px;
-}
-
-.EPLTable table td{
-    margin-top: 10px;
-}
-
-.EPLTable-mini {
-    width: 35%;
-    height: 651px;
-    margin-right: auto;
-    margin-top: 30px;
-    float:right;
-}
-
-.EPLTable-mini img{
-    height: 15px;
-    width: 15px;
-}
-
-#ul_top_hypers li {
-    list-style: none;
-    display: flex;
-    float: right;
-    margin: 0 15px 0 15px;
-}
-
-.logo{
-    text-transform:uppercase;
-    font-size: 29px;
-    font-weight: 800;
-}
-
-header{
-    padding: 50px 0;
-}
-
-header nav ul li{
-    display: inline-block;
-}
-header nav ul li a {
-    color: black;
-}
-header nav ul li.active::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 5px;
-    background: #00bfff;
-    border-radius: 10px;
-    position:relative;
-    top:20px;
-    left:-38px;
-}
-
-header nav ul li:not(.active):not(.btn) a:hover{
-    border-bottom: 5px solid #00bfff;
-}
-
-.widget-box {
-    
-    width: 33%;
-    margin-right: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: inline-block;
-}
-
-.footer {
+.news-widgets-container {
     height: auto;
     width: 100%;
-    background-color: gray;
-    margin-top: 100px;
-}
-.footer-widgets {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.footer-container {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+.pb-3 {
+    height: 100%;
 }
 
-.footer hr {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.footer a{
-    margin-right: 30px;
-}
-
-.footer img{
-    background-color: gray;
-    height:15px;
-}
 .privacy-policy {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.button-sw-left{
-    position:absolute;
-    float:left;
-    height:10%;
-    margin-top: 45%;
-}
-
-.button-sw-right {
+.scroll-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     position: absolute;
-    float: right;
-    height: 10%;
-    margin-top: 45%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
 }
 
-.football-clubs-list{
-    width: 100%;
-    height: auto;
+.scroll-button.disabled {
+    display: none;
 }
 
-.football-clubs-list content {
-    display: inline-block;
+.scroll-button.left {
+    left: 10px;
 }
 
-.football-clubs-list a img{
-    height: 75px;
-    width: 75px;
-    vertical-align: middle;
+.scroll-button.right {
+    right: 10px;
 }
 
-.football-clubs-list p{
+.scroll-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-50%) scale(1.1);
+}
 
+.team-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 10px;
+    width: calc(100% - 100px);
+}
+
+.team-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-container a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-container img {
+    border-radius: 8px;
+}
+
+.team-container-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+
+.team-logo {
+    height: 500px;
+    width: 500px;
+}
+
+.team-name {
+    color: black;
 }
 
 .team-widget {
@@ -332,20 +504,34 @@ header nav ul li:not(.active):not(.btn) a:hover{
     width: 24%;
     display: inline-block;
     align-items: center;
-}
-
-.team-widget{
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
 .team-widget img {
-  
+    width: 75px;
 }
 
 .team-widget span {
     width: 75px;
 }
 
-.fc-card {
+.widget-box {
+    width: 33%;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
 
+.wrapper {
+    margin-left: 15%;
+    width: 70%;
+    min-height: 100%;
+}
+
+#ul_top_hypers li {
+    list-style: none;
+    display: flex;
+    float: right;
+    margin: 0 15px 0 15px;
 }

@@ -94,15 +94,6 @@ D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\Microsoft.Extensions.Configuration.B
 D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\Microsoft.Extensions.Hosting.dll
 D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\AngleSharp.dll
-D:\HelloMvcApp\HelloMvcApp\obj\Debug\net7.0\WOD.WebUI.MvcApplicationPartsAssemblyInfo.cs
-D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\FromHeaderAttribute.dll
-D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\System.Web.Http.WebHost.dll
-D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\Microsoft.OpenApi.dll
-D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\Swagger.Net.dll
-D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
-D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\HelloMvcApp\HelloMvcApp\obj\Debug\net7.0\WOD.WebUI.csproj.CopyComplete
 D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\WOD.DAL.dll
 D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\WOD.DAL.pdb
 D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
@@ -110,3 +101,8 @@ D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\Microsoft.Extensions.ObjectPool.dll
 D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
 D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\System.Text.Encodings.Web.dll
 D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
+D:\HelloMvcApp\HelloMvcApp\obj\Debug\net7.0\WOD.WebUI.sourcelink.json
+D:\HelloMvcApp\HelloMvcApp\obj\Debug\net7.0\WOD.WebUI.csproj.Up2Date
+D:\HelloMvcApp\HelloMvcApp\bin\Debug\net7.0\WOD.WebUI.staticwebassets.endpoints.json
+D:\HelloMvcApp\HelloMvcApp\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+D:\HelloMvcApp\HelloMvcApp\obj\Debug\net7.0\staticwebassets\msbuild.WOD.WebUI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

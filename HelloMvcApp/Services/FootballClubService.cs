@@ -156,8 +156,6 @@ namespace WOD.WebUI.Services
 				footballClub.GoalsAgainst = Byte.Parse(row.Children[7].TextContent);
 				footballClub.GoalsDifference = (sbyte)int.Parse(row.Children[8].TextContent);
 				footballClub.Points = Byte.Parse(row.Children[9].TextContent);
-
-				Update(footballClub);
 			}
 			await SaveAsync();
 		}

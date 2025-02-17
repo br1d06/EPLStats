@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 
 namespace WOD.Domain.Models;
 
@@ -28,5 +29,6 @@ public class News
 	}
 
 	public News() { }
+
 }
 

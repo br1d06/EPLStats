@@ -3,59 +3,120 @@
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-	ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home Page";
 }
 @model WOD.WebUI.ViewModels.HomeViewModel;
 
-
 <div class="wrapper">
+    <!-- Контейнер для команд с кнопками прокрутки -->
+    <div class="team-container-wrapper">
+        <button class="scroll-button left" onclick="scrollTeams(-1)">&#10094;</button>
+        <div class="team-container" id="teamContainer">
+            @foreach (var footballClub in Model.FootballClubs)
+            {
+                <a target="_blank" href="/FootballClub/Details?id=@footballClub.Id">
+                    <img src="@footballClub.Logo" alt="@footballClub.Name" height="75" width="75">
+                </a>
+            }
+        </div>
+        <button class="scroll-button right" onclick="scrollTeams(1)">&#10095;</button>
+    </div>
 
-	<div class="team-container">
+    <!-- Обновленный блок с новостями -->
+    <div class="news-container">
+        <div class="news-grid">
+            @if (Model.ContainerNews.Count == 0)
+            {
+                <a href="/News/Details?id=@Model.DefaultNews.Id">
+                    <div class="news-card">
+                        <img src="@Model.DefaultNews.Image" alt="@Model.DefaultNews.Title" class="news-image">
+                        <div class="news-content">
+                            <h2 class="news-title">@Model.DefaultNews.Title</h2>
+                            <div class="news-dates">
+                                <span class="news-date">Added: @Model.DefaultNews.DateAdded.ToShortDateString()</span>
+                                <span class="news-date">Updated: @Model.DefaultNews.DateUpdated.ToShortDateString()</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            }
+            else
+            {
+                <a href="/News/Details?id=@Model.TranslayedNews.Id">
+                    <div class="news-card">
+                        <img src="~/@Model.TranslayedNews.Image" alt="@Model.TranslayedNews.Title" class="news-image">
+                        <div class="news-content">
+                            <h2 class="news-title">@Model.TranslayedNews.Title</h2>
+                            <div class="news-dates">
+                                <span class="news-date">Added: @Model.TranslayedNews.DateAdded.ToShortDateString()</span>
+                                <span class="news-date">Updated: @Model.TranslayedNews.DateUpdated.ToShortDateString()</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+        <div class="news-pagination">
+            @for (int i = 0; i < Model.ContainerNews.Count; i++)
+            {
+                <a type="button" href="/News/GetTranslayedNews?index=@(i)" class="btn">@(i + 1)</a>
+            }
+        </div>
+    </div>
 
-		@foreach (var footballClub in Model.FootballClubs)
-		{
-			<a target="_blank" href="/FootballClubs/Details?id=@footballClub.Id"> <img src="@footballClub.Logo" alt="@footballClub.Name" height="75" width="75"> </a>
-		}
-
-	</div>
-
-	<div class="news-container">	
-		<div class="news-info">			
-			@if (Model.ContainerNews.Count == 0)
-			{
-				<a news="blah" href="#"><h2><span>@Model.DefaultNews.Title</span></h2><img src="~/Content/NewsImages/@Model.DefaultNews.Image" /></a>
-			}
-			else
-			{
-				<a news="blah" href="/News/Details?id=@Model.TranslayedNews.Id"><h2><span>@Model.TranslayedNews.Title</span></h2><img src="~/Content/NewsImages/@Model.TranslayedNews.Image" /></a>
-			}
-		</div>			
-		@for (int i = 0; i < Model.ContainerNews.Count; i++)
-		{
-			<a type="button" href="/News/GetTranslayedNews?index=@(i)" class="btn">@(i+1)</a>
-		}
-	</div>
-	
-	<table class="EPLTable-mini">
-		<thead>
-			<tr>
-				<th scope="col">Position</th>
-				<th scope="col">Club</th>
-				<th scope="col">Points</th>
-				<th scope="col">GD</th>
-			</tr>
-		</thead>
-		<tbody>
-			@for(int i=0; i<Model.FootballClubs.Count; i++)
-			{				
-			<tr>
-				<th scope="row">@(i+1)</th>
-				<td><img src="@Model.FootballClubs[i].Logo"/> @Model.FootballClubs[i].Name</td>
-				<td>@Model.FootballClubs[i].Points</td>
-				<td>@Model.FootballClubs[i].GoalsDifference</td>
-			</tr>
-			}
-		</tbody>
-	</table>
+    <!-- Обновленная мини-таблица EPLTable-mini -->
+    <div class="EPLTable-mini">
+        <div class="EPLTable-mini-card">
+            <table>
+                <thead>
+                <tr>
+                    <th scope="col">Position</th>
+                    <th scope="col">Club</th>
+                    <th scope="col">Points</th>
+                    <th scope="col">GD</th>
+                </tr>
+                </thead>
+                <tbody>
+                @for (int i = 0; i < Model.FootballClubs.Count; i++)
+                {
+                    <tr>
+                        <th scope="row">@(i + 1)</th>
+                        <td><img src="@Model.FootballClubs[i].Logo" /> @Model.FootballClubs[i].Name</td>
+                        <td>@Model.FootballClubs[i].Points</td>
+                        <td>@Model.FootballClubs[i].GoalsDifference</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
+
+<script>
+    let currentScroll = 0;
+    const scrollAmount = 100; // Шаг прокрутки (можно настроить)
+    const teamContainer = document.getElementById('teamContainer');
+
+    function scrollTeams(direction) {
+        const containerWidth = teamContainer.offsetWidth;
+        const scrollWidth = teamContainer.scrollWidth;
+
+        currentScroll += direction * scrollAmount;
+
+        // Ограничение прокрутки влево
+        if (currentScroll < 0) {
+            currentScroll = 0;
+        }
+
+        // Ограничение прокрутки вправо
+        if (currentScroll > scrollWidth - containerWidth) {
+            currentScroll = scrollWidth - containerWidth;
+        }
+
+        teamContainer.scrollTo({
+            left: currentScroll,
+            behavior: 'smooth'
+        });
+    }
+</script>
 

@@ -18,10 +18,9 @@ builder.Services.AddTransient<NewsService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+
+if (builder.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
@@ -33,7 +32,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{index?}");
+    pattern: "{controller=Home}/{action=Index}/");
 
 app.Run();
 

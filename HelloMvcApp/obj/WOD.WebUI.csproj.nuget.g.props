@@ -17,14 +17,10 @@
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.configuration.usersecrets\7.0.0\buildTransitive\net6.0\Microsoft.Extensions.Configuration.UserSecrets.props" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.configuration.usersecrets\7.0.0\buildTransitive\net6.0\Microsoft.Extensions.Configuration.UserSecrets.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\7.0.20\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\7.0.20\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props')" />
     <Import Project="$(NuGetPackageRoot)entityframework\6.5.1\buildTransitive\net6.0\EntityFramework.props" Condition="Exists('$(NuGetPackageRoot)entityframework\6.5.1\buildTransitive\net6.0\EntityFramework.props')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.extensions.apidescription.server\6.0.5\build\Microsoft.Extensions.ApiDescription.Server.props" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.apidescription.server\6.0.5\build\Microsoft.Extensions.ApiDescription.Server.props')" />
-    <Import Project="$(NuGetPackageRoot)swashbuckle.aspnetcore\7.2.0\build\Swashbuckle.AspNetCore.props" Condition="Exists('$(NuGetPackageRoot)swashbuckle.aspnetcore\7.2.0\build\Swashbuckle.AspNetCore.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\7.0.20\build\net6.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\7.0.20\build\net6.0\Microsoft.EntityFrameworkCore.Design.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\islam\.nuget\packages\entityframework\6.5.1</PkgEntityFramework>
-    <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">C:\Users\islam\.nuget\packages\microsoft.extensions.apidescription.server\6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
-    <PkgSwagger-Net Condition=" '$(PkgSwagger-Net)' == '' ">C:\Users\islam\.nuget\packages\swagger-net\8.5.12.1</PkgSwagger-Net>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\islam\.nuget\packages\microsoft.entityframeworkcore.tools\7.0.20</PkgMicrosoft_EntityFrameworkCore_Tools>
   </PropertyGroup>
 </Project>

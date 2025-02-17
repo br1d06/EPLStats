@@ -17,6 +17,8 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\HelloMvcApp\HelloMvcApp
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 7.0
+build_property.EnableCodeStyleSeverity = 
 
 [D:/HelloMvcApp/HelloMvcApp/Views/FootballClub/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vdGJhbGxDbHViXERldGFpbHMuY3NodG1s

@@ -19,6 +19,7 @@ public class NewsController : Controller
 		_logger = logger;
 		_newsService = newsService;
 		_environment = environment;
+		_footballClubService = footballClubService;
 	}
 	public IActionResult Index()
 	{			
@@ -32,24 +33,27 @@ public class NewsController : Controller
 	{
 		var homeViewModel = new HomeViewModel(_footballClubService.GetListFootballClubs(), _newsService.GetList(), index);
 
-		return View("/Views/Home/Index.cshtml", homeViewModel); 
+		return View("~/Views/Home/Index.cshtml", homeViewModel); 
 	}
 	public IActionResult Create() 
 	{
 		return View("~/Views/News/Create.cshtml");
 	}
     [HttpPost]
-    public async Task<IActionResult> Create(News news, IFormFile imageFile)
+    public async Task<IActionResult> Create(CreateNews createNews)
     {
         if (ModelState.IsValid)
         {
             try
             {
+				var imageFile = createNews.Image;
+				string? imagePath = null;
+
                 if (imageFile != null && imageFile.Length > 0)
                 {
                     var uniqueFileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
                     
-                    var uploadsFolder = Path.Combine(_environment.WebRootPath, "images", "news");
+                    var uploadsFolder = Path.Combine(_environment.WebRootPath, "Content", "NewsImages");
                     if (!Directory.Exists(uploadsFolder))
                     {
                         Directory.CreateDirectory(uploadsFolder);
@@ -62,26 +66,34 @@ public class NewsController : Controller
                         await imageFile.CopyToAsync(fileStream);
                     }
                     
-                    news.Image = Path.Combine("images", "news", uniqueFileName);
+                    imagePath = Path.Combine("Content", "NewsImages", uniqueFileName);
                 }
-                
-                news.DateAdded = DateTime.Now;
-                news.DateUpdated = news.DateAdded;
-                
+                			
+				var now = DateTime.UtcNow;
+
+				var news = new News()
+				{
+					Title = createNews.Title,
+					Text = createNews.Text,
+					Image = imagePath,
+					DateAdded = now,
+					DateUpdated = now,
+				};
+
                 await _newsService.Create(news);
 
-                _logger.LogInformation("News item successfully created: {Title}", news.Title);
+                _logger.LogInformation("News item successfully created: {Title}", createNews.Title);
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while creating news item.");
                 ModelState.AddModelError("", "An error occurred while processing your request.");
+
             }
         }
 
-        // Если модель не валидна, возвращаем представление с ошибками
-        return View(news);
+        return View("Index");
     }
 
     public async Task<IActionResult> Edit(int id)
@@ -129,8 +141,8 @@ public class NewsController : Controller
 		}
         return NotFound();
     }
+    
 	[HttpGet]
-	[ValidateAntiForgeryToken]
     public async Task<IActionResult> Details(int id)
 	{
 		var news = await _newsService.Get(id);
@@ -140,7 +152,7 @@ public class NewsController : Controller
 			return NotFound();
 		}
 
-		return View(news);
+		return View("~/Views/News/Details.cshtml", news);
 	}
 		
 }

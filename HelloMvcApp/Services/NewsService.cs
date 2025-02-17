@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using WOD.DAL.Repositories;
 using WOD.Domain.Models;
+using WOD.WebUI.ViewModels;
 
 namespace WOD.WebUI.Services;
 

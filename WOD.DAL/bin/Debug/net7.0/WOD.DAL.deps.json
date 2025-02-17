@@ -562,7 +562,10 @@
           "Microsoft.Extensions.Configuration.UserSecrets": "7.0.0"
         },
         "runtime": {
-          "WOD.Domain.dll": {}
+          "WOD.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

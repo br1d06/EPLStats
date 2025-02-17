@@ -27,7 +27,7 @@ public class HomeController : Controller
         _newsService = newsService;
     }
 
-    public async Task<IActionResult> IndexAsync()
+    public async Task<IActionResult> Index()
     {
         var homeViewModel = new HomeViewModel(_footballClubService.GetListFootballClubs(), _newsService.GetList());
 

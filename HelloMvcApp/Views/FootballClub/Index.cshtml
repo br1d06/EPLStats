@@ -12,7 +12,7 @@
 		@foreach (var footballClub in Model.FootballClubs)
 		{
 			<div class="team-widget">
-				<a target="_blank" href="/FootballClubs/Details?id=@footballClub.Id"> <img src="@footballClub.Logo"><br>@footballClub.Name</a>
+				<a target="_blank" href="/FootballClub/Details?id=@footballClub.Id"> <img src="@footballClub.Logo"><br>@footballClub.Name</a>
 
 			</div>
 		}

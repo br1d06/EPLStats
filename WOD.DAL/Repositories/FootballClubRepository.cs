@@ -33,7 +33,10 @@ public class FootballClubRepository : IRepository<FootballClub>
     {
         var footballClub = await _context.FootballClubs.FirstOrDefaultAsync((f) => f.Name == footballClubName);
 
-        return footballClub ?? throw new ObjectNotFoundException("Football club not found");
+        return footballClub ?? Create(new FootballClub()
+        {
+            Name = footballClubName
+        });
     }
 
     public FootballClub Create(FootballClub footballClub)

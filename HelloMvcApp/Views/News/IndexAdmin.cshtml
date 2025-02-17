@@ -1,31 +1,45 @@
-﻿@model WOD.WebUI.ViewModels.NewsViewModel
-
+﻿@using WOD.Domain.Models;
+@using HelloMvcApp.Controllers;
 @{
     ViewData["Title"] = "Index Admin";
 }
+@model WOD.WebUI.ViewModels.NewsViewModel;
 
-<div class="wrapper">
-	<h1>Index Admin page</h1>
-
-    <h3>News List Editorial</h3>
-    <h4>News</h4>
-    <hr />
-    <div class="news-editorial-box">
-        <form asp-asp-controller="News">
-            @for (int index = 0; index < Model.AllNews.Count; index++)
-            {
-                <div class="news-widgets">
-                        <a news="blah" href="#"><img src="~/Content/NewsImages/@Model.AllNews[index].Image" /></a>
-				    <span>@Model.AllNews[index].Title</span>
-                    <br>
-                    <button type="submit" asp-action="Delete" asp-route-id="@Model.AllNews[index].Id">Delete</button>
-                    <button type="submit" asp-action="Edit" asp-route-id="@Model.AllNews[index].Id">Edit</button>
-                </div>         
-		    }
-        </form>
-	</div>
-
-    <a asp-action="Index" style="padding-top: 10px">Back to List</a>
-    <a asp-action="Create" style="padding-top: 10px">Create new News</a>
-
-</div>
+<body>
+    <div class="wrapper">
+        <div class="news-container">
+            <h1>News List Editorial</h1>
+            <div class="news-grid">
+                @foreach (var news in Model.AllNews)
+                {
+                    <div class="news-card">
+                        <a href="/News/Details?id=@news.Id">
+                            <img src="~/@news.Image" alt="@news.Title" class="news-image">
+                            <div class="news-content">
+                                <h2 class="news-title">@news.Title</h2>
+                                <div class="news-dates">
+                                    <span class="news-date">Added: @news.DateAdded.ToShortDateString()</span>
+                                    <span class="news-date">Updated: @news.DateUpdated.ToShortDateString()</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="news-actions">
+                            <form asp-controller="News" asp-action="Delete" method="post" onsubmit="return confirm('Are you sure you want to delete this news item?');">
+                                <input type="hidden" name="id" value="@news.Id" />
+                                <button type="submit" class="btn-delete">Delete</button>
+                            </form>
+                            <form asp-controller="News" asp-action="Edit" method="get">
+                                <input type="hidden" name="id" value="@news.Id" />
+                                <button type="submit" class="btn-edit">Edit</button>
+                            </form>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="admin-actions">
+                <a asp-action="Create" class="btn-create">Create new News</a>
+                <a asp-action="Index" class="btn-back">Back to List</a>
+            </div>
+        </div>
+    </div>
+</body>

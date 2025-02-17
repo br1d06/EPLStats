@@ -12,3 +12,4 @@ D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\ref\WOD.Domain.dll
 D:\HelloMvcApp\WOD.Domain\bin\Debug\net7.0\WOD.Domain.runtimeconfig.json
 D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\WOD.Domain.csproj.AssemblyReference.cache
 D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\WOD.Domain.genruntimeconfig.cache
+D:\HelloMvcApp\WOD.Domain\obj\Debug\net7.0\WOD.Domain.sourcelink.json

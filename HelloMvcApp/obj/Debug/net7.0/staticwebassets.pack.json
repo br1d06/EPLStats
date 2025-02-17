@@ -2,7 +2,15 @@
   "Files": [
     {
       "Id": "D:\\HelloMvcApp\\HelloMvcApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\WOD.WebUI.bundle.scp.css",
-      "PackagePath": "staticwebassets\\WOD.WebUI.bundle.scp.css"
+      "PackagePath": "staticwebassets\\WOD.WebUI.2j67k8ii2o.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\HelloMvcApp\\HelloMvcApp\\wwwroot\\Content\\EPLLogo.png",
+      "PackagePath": "staticwebassets\\Content\\EPLLogo.png"
+    },
+    {
+      "Id": "D:\\HelloMvcApp\\HelloMvcApp\\wwwroot\\Content\\NewsImages\\9c104606-131e-4130-93c6-f9466161b3a1_CR7InMU.png",
+      "PackagePath": "staticwebassets\\Content\\NewsImages\\9c104606-131e-4130-93c6-f9466161b3a1_CR7InMU.png"
     },
     {
       "Id": "D:\\HelloMvcApp\\HelloMvcApp\\wwwroot\\Content\\NewsImages\\CR7InJuventus.png",
@@ -21,6 +29,10 @@
       "PackagePath": "staticwebassets\\Content\\NewsImages\\R7Al-Nassr.png"
     },
     {
+      "Id": "D:\\HelloMvcApp\\HelloMvcApp\\wwwroot\\Content\\NewsImages\\abb27090-12f7-41a2-bc14-ce7e42024a22_CR7InJuventus.png",
+      "PackagePath": "staticwebassets\\Content\\NewsImages\\abb27090-12f7-41a2-bc14-ce7e42024a22_CR7InJuventus.png"
+    },
+    {
       "Id": "D:\\HelloMvcApp\\HelloMvcApp\\wwwroot\\Content\\NewsImages\\errorNews.png",
       "PackagePath": "staticwebassets\\Content\\NewsImages\\errorNews.png"
     },
@@ -35,6 +47,10 @@
     {
       "Id": "D:\\HelloMvcApp\\HelloMvcApp\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\HelloMvcApp\\HelloMvcApp\\wwwroot\\images\\news\\2c3918dc-310a-41ff-9bdd-7478e51c1df7_R7Al-Nassr.png",
+      "PackagePath": "staticwebassets\\images\\news\\2c3918dc-310a-41ff-9bdd-7478e51c1df7_R7Al-Nassr.png"
     },
     {
       "Id": "D:\\HelloMvcApp\\HelloMvcApp\\wwwroot\\js\\site.js",
@@ -267,6 +283,10 @@
     {
       "Id": "D:\\HelloMvcApp\\HelloMvcApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WOD.WebUI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WOD.WebUI.Microsoft.AspNetCore.StaticWebAssets.props",
